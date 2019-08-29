@@ -23,7 +23,6 @@ bookmarksRouter
         res.json(bookmarks.map(serializeBookmark))
       })
       .catch(next)
-      
   })
   .post(bodyParser, (req, res, next) => {
     for (const field of ['title', 'url', 'rating']) {
